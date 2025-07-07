@@ -55,3 +55,19 @@ vector<pregunta> preguntah = {
         {"Cual es el principal torneo anual de tenis sobre cesped?", {"a) Roland Garros", "b) Wimbledon", "c) US Open"}, 'B'},
         {"Cuantos sets se necesitan ganar para triunfar en un partido de tenis masculino de Grand Slam?",{"a) 2", "b) 3", "c) 4"}, 'B'},
         {"Que deporte usa un disco llamado 'puck'?",{"a) Balonmano", "b) Hockey sobre hielo", "c) Waterpolo"}, 'B'}};
+        vector<pregunta> preguntag ={
+        {"Cual es el rio mas largo del mundo?", {"a) Amazonas", "b) Nilo", "c) Yangtse"}, 'A'},
+        {"Cual es la capital de Suecia?", {"a) Copenhague", "b) Estocolmo", "c) Oslo"}, 'B'},
+        {"En que continente se encuentra Vietnam?",{"a) Asia", "b) Europa", "c) Africa"}, 'A'},
+        {"Cual es el pais con mas islas en el mundo?", {"a) Indonesia", "b) Suecia", "c) Filipinas"}, 'B'},
+        {"Cual es el desierto mas grande del mundo?",{"a) Sahara", "b) Antartico", "c) Gobi"}, 'B'},
+        {"Cual es la montana mas alta del mundo?", {"a) K2", "b) Everest", "c) Aconcagua"}, 'B'},
+        {"En que pais esta el Taj Mahal?",{"a) India", "b) Pakistan", "c) Nepal"}, 'A'},
+        {"Cual es el pais mas poblado del mundo?",{"a) India", "b) China", "c) Estados Unidos"}, 'B'},
+        {"Que pais tiene forma de bota?", {"a) Francia", "b) Italia", "c) Grecia"}, 'B'},
+        {"Cual es la capital de Corea del Sur?",{"a) Busan", "b) Seul", "c) Tokio"}, 'B'},
+        {"Cual es el lago mas grande de Africa?",{"a) Lago Victoria", "b) Lago Tanganica", "c) Lago Malawi"}, 'A'},
+        {"En que continente esta Surinam?", {"a) Europa", "b) Africa", "c) America"}, 'C'},
+        {"Cual es el pais mas pequeno del mundo?",{"a) Monaco", "b) San Marino", "c) Ciudad del Vaticano"}, 'C'},
+        {"Que oceano bana la costa este de Estados Unidos?",{"a) Atlantico", "b) Pacifico", "c) Indico"}, 'A'},
+        {"Cual es la capital de Nueva Zelanda?", {"a) Auckland", "b) Wellington", "c) Christchurch"}, 'B'}};
