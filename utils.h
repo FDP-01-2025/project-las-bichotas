@@ -22,5 +22,4 @@ extern string LOSER_COLOR;
 void displayMessage(const string& message, const string& color = RESET_COLOR);
 
 
-
 #endif // UTILS_H
