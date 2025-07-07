@@ -17,3 +17,9 @@ void beepSound() {
     cout << "\a";
 }
 
+// Muestra la información de una carta en formato de texto (ejemplo: "[As de Espadas]")
+void displayCardText(const string& rank, const string& suit) {
+    cout << "[" << rank << " de " << suit << "]" << endl;
+}
+
+
