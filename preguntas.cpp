@@ -39,3 +39,19 @@ vector<pregunta> preguntah = {
         {"Que género mezcla el jazz, musica afroamericana y latina?", {"A) Soul", "B) Latin Jazz", "C) Reggae"}, 'B'},
         {"Que cantante es conocido como por sus comentarios polemicos en X?", {"A) Ye", "B) Kanye west", "C) Todas son correctas"}, 'C'},
         {"Que artista tiene el estilo de musica urbana en exitos como Felices los 4?", {"A) Maluma", "B) J Balvin", "C) Ozuna"}, 'A'}};
+         vector<pregunta> preguntad ={
+        {"Cuantos jugadores hay en el campo por equipo en un partido de futbol?", {"a) 9", "b) 10", "c) 11"}, 'C'},
+        {"Cada cuantos anos se celebra la Copa Mundial de la FIFA?",{"a) Cada 2 anos", "b) Cada 4 anos", "c) Cada 5 anos"}, 'B'},
+        {"Que pais ha ganado mas Copas del Mundo?",{"a) Alemania", "b) Italia", "c) Brasil"}, 'C'},
+        {"Como se llama el torneo de clubes mas importante de Europa?", {"a) Europa League", "b) Champions League", "c) Conference League"}, 'B'},
+        {"Cual de estos paises nunca ha ganado un Mundial?",{"a) Inglaterra", "b) Espana", "c) Paises Bajos"}, 'C'},
+        {"Que significa 'hat-trick' en futbol?",{"a) Anotar tres goles en un partido", "b) Ganar tres titulos en un ano", "c) Defender tres penales"}, 'A'},
+        {"Que pais fue sede del Mundial en 2022?", {"a) Rusia", "b) Qatar", "c) Japon"}, 'B'},
+        {"Cual es la maxima autoridad en un partido de futbol?", {"a) El entrenador", "b) El capitan", "c) El arbitro"}, 'C'},
+        {"Que superficie es la mas comun en el futbol profesional?",{"a) Arena", "b) Cesped", "c) Concreto"}, 'B'},
+        {"Que pasa si un partido de eliminacion directa termina empatado tras los 90 minutos y el tiempo extra?",{"a) Se repite el partido", "b) Se define por penales", "c) Se da empate"}, 'B'},
+        {"Cuantos anillos tiene el simbolo olimpico?", {"a) 4", "b) 5", "c) 6"}, 'B'},
+        {"Que deporte se juega en un campo llamado 'diamond' en ingles?", {"a) Rugby", "b) Hockey", "c) Beisbol"}, 'C'},
+        {"Cual es el principal torneo anual de tenis sobre cesped?", {"a) Roland Garros", "b) Wimbledon", "c) US Open"}, 'B'},
+        {"Cuantos sets se necesitan ganar para triunfar en un partido de tenis masculino de Grand Slam?",{"a) 2", "b) 3", "c) 4"}, 'B'},
+        {"Que deporte usa un disco llamado 'puck'?",{"a) Balonmano", "b) Hockey sobre hielo", "c) Waterpolo"}, 'B'}};
