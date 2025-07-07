@@ -22,4 +22,8 @@ void displayCardText(const string& rank, const string& suit) {
     cout << "[" << rank << " de " << suit << "]" << endl;
 }
 
-
+// Muestra un mensaje de logro con un color especial y sonido
+void displayAchievement(const string& achievement) {
+    displayMessage("LOGRO DESBLOQUEADO: " + achievement, MAGENTA_COLOR);
+    beepSound();
+}
