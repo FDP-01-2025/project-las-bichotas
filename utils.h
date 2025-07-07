@@ -13,7 +13,6 @@ using namespace std;
 #define BLUE_COLOR    "\033[34m"
 #define MAGENTA_COLOR "\033[35m"
 #define CYAN_COLOR    "\033[36m"
-<<<<<<< HEAD
 
 // Variables globales de color para resultados del juego
 extern string WINNER_COLOR;
@@ -28,9 +27,5 @@ void beepSound();
 // Muestra la información de una carta en formato de texto (ejemplo: "[As de Espadas]")
 void displayCardText(const string& rank, const string& suit);
 
-// Muestra un mensaje de logro con un color especial y sonido
-void displayAchievement(const string& achievement);
 
 #endif // UTILS_H
-=======
->>>>>>> aac68a76e7c40e52e233225c26bc4409edf62aac
