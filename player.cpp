@@ -35,3 +35,15 @@ int Player::calculatePoints() const {
     return sum;
 }
 
+// Muestra las cartas en la mano del jugador
+void Player::displayHand() const {
+    cout << name << " tiene: ";
+    for (size_t i = 0; i < hand.size(); ++i) {
+        cout << hand[i].rank << " de " << hand[i].suit;
+        // Agrega coma solo si no es la última carta
+        if (i < hand.size() - 1) {
+            cout << ", ";
+        }
+    }
+    cout << endl; // No se muestran los puntos aquí según lo solicitado
+}
