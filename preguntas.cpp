@@ -23,3 +23,19 @@ vector<pregunta> preguntah = {
         {"Que caida en 1989 simboliza el final de la Guerra Fria?", {"A) La caída del Muro de Berlín", "B) La caida de Saigon", "C) La caida de Kabul"}, 'A'},
         {"Que pais lanzo el primer satelite al espacio en 1957?", {"A) Estados Unidos", "B) Alemania", "C) La URSS"}, 'C'},
         {"Que evento en 2001 sacudio al mundo?", {"A) La caida de la bolsa de Wall Street", "B) El 11 de septiembre en USA", "C) La primavera arabe"}, 'B'}};
+         vector<pregunta> preguntam = {
+        {"Que cantante es conocido como the King of Pop?", {"A) Elvis Presley", "B) Michael Jackson", "C) Prince"}, 'B'},
+        {"Que banda britanica estaba compuesta por John Lennon, Paul McCartney, George Harrison y Ringo Starr?", {"A) Queen", "B) The Beatles", "C) The Rolling Stones"}, 'B'},
+        {"Quien canta WHITE FERRARY?", {"A) Kanye West", "B) Franl Ocean", "C) Bad Bunny"}, 'B'},
+        {"Que genero musical nacio en el Bronx, Nueva York, en los anos 1970?", {"A) Jazz", "B) Rock and Roll", "C) Hip Hop"}, 'C'},
+        {"Que ciudad de Estados Unidos es conocida como la cuna del Hip Hop?", {"A) Los Angeles", "B) Atlanta", "C) Nueva York (Bronx)"}, 'C'},
+        {"Que artista latino tiene exitos como Vivir Mi Vida?", {"A) Marc Anthony", "B) Maluma", "C) Romeo Santos"}, 'A'},
+        {"Que estilo musical popular nacio en Republica Dominicana?", {"A) Cumbia", "B) Merengue", "C) Tango"}, 'B'},
+        {"Que artista latino es reconocido como pionero del trap en espanol?", {"A) Bad Bunny", "B) Anuel AA", "C) Arcángel"}, 'A'},
+        {"Que banda de rock en espanol es de Argentina?", {"A) Soda Stereo", "B) Mana", "C) Cafe Tacvba"}, 'A'},
+        {"Que cantante urbana canta Saoko?", {"A) Karol G", "B) Bad Bunny", "C) Rosalia"}, 'C'},
+        {"Que grupo de Memphis es considerado pionero en el estilo Memphis Rap?", {"A) Three 6 Mafia", "B) Outkast", "C) Run-D.M.C"}, 'A'},
+        {"Que artista canta Bichota?", {"A) Karol G", "B) Natti Natasha", "C) Anuel AA"}, 'A'},
+        {"Que género mezcla el jazz, musica afroamericana y latina?", {"A) Soul", "B) Latin Jazz", "C) Reggae"}, 'B'},
+        {"Que cantante es conocido como por sus comentarios polemicos en X?", {"A) Ye", "B) Kanye west", "C) Todas son correctas"}, 'C'},
+        {"Que artista tiene el estilo de musica urbana en exitos como Felices los 4?", {"A) Maluma", "B) J Balvin", "C) Ozuna"}, 'A'}};
