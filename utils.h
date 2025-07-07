@@ -27,5 +27,7 @@ void beepSound();
 // Muestra la información de una carta en formato de texto (ejemplo: "[As de Espadas]")
 void displayCardText(const string& rank, const string& suit);
 
+// Muestra un mensaje de logro con un color especial y sonido
+void displayAchievement(const string& achievement);
 
 #endif // UTILS_H
