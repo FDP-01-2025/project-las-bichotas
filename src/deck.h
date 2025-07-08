@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include <random> // <- Asegúrate de tener esto
+#include <random> 
 
 using namespace std;
 
@@ -20,8 +20,8 @@ private:
 public:
     Deck();
 
-    // ✅ Cambiar esta línea:
-    void shuffle(std::mt19937& rng);  // ← DEBE aceptar rng como referencia
+   
+    void shuffle(std::mt19937& rng); 
 
     Card deal();
 };
