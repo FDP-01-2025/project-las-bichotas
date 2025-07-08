@@ -9,9 +9,6 @@ struct Question
     char answer;
 };
 
-// Se crearon las preguntas para luego ser llamadas como un vector dentro de nuestro codigo principal.
-// El struct cuenta con el vector string que esta separado del string text para poder separar las preguntas.
-// La variable char es usada para dar nuestra respuesta, la cual se compara en nuestro codigo de trivia para determinar si es correcta.
 
 vector<Question> historyQuestions = {
     {"Quien fue el primer pais en atacar en la segunda guerra mundial?", {"A) espana", "B) UK", "C) Alemania"}, 'C'},

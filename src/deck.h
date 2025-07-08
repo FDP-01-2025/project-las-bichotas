@@ -26,4 +26,4 @@ public:
     Card deal();
 };
 
-#endif // DECK_H
+#endif

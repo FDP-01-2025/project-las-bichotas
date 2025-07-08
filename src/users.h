@@ -11,7 +11,7 @@ struct User {
 };
 
 extern vector<User> users;
-extern string currentUserName;
+extern string currentName;
 
 void createUser();
 void showUsers();

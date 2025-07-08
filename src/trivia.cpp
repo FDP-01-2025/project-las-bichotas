@@ -1,40 +1,33 @@
-#include "trivia.h"    // Se asume que contiene la definición de la estructura/clase Question
-#include "questions.h" // Se asume que contiene los vectores historyQuestions, musicQuestions, etc.
-#include "users.h"     // Se asume que contiene la estructura/clase User y el vector 'users'
-#include <iostream>    // Para entrada/salida estándar (cout, cin)
-#include <algorithm>   // Para std::shuffle
-#include <random>      // Para std::random_device, std::mt19937
-#include <limits>      // Para std::numeric_limits
-#include <vector>      // Asegúrate de incluir vector si no está en otras cabeceras
+#include "trivia.h"    
+#include "questions.h" 
+#include "users.h"    
+#include <iostream>   
+#include <algorithm>  
+#include <random>      
+#include <limits>      
+#include <vector>      
 
-// Se declara en otro lugar, probablemente en users.h o en un ámbito global.
 extern std::string currentName;
-// Asumiendo que el vector 'users' está declarado en users.h
+
 extern std::vector<User> users;
 
-// Función para guardar los datos de los usuarios, definida en otro lugar (ej. en users.cpp)
 void saveUsers();
 
-// Función para pausar la ejecución y esperar que el usuario presione Enter
 void pressContinue() {
     std::cout << "\nPresiona Enter para continuar..." << std::endl;
-    // Limpia el búfer de entrada.
-    // numeric_limits<streamsize>::max() asegura que se ignoran todos los caracteres hasta el salto de línea.
+    
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    std::cin.get(); // Espera un carácter de nueva línea (tecla Enter)
+    std::cin.get(); 
 }
 
-// Funcionamiento principal del juego para una categoría específica.
-void playCategory(std::vector<Question> &questions) {
-    // Usa std::random_device para una semilla no determinista para el motor Mersenne Twister.
-    std::random_device rd;
-    std::mt19937 rng(rd()); // Sembrar el generador de números aleatorios
-    char respuesta_char;    // Usar un nombre de variable diferente para evitar confusión con la respuesta correcta
-    int puntaje_actual = 0; // Inicializar el puntaje para la ronda/categoría actual
 
-    // Mezclar las preguntas usando el motor Mersenne Twister para una mejor aleatoriedad.
-    // Usar std::min para asegurar que no intentamos jugar más preguntas de las disponibles.
-    int num_preguntas_a_jugar = std::min((int)questions.size(), 7); // Jugar un máximo de 7 preguntas o todas si hay menos de 7
+void playCategory(std::vector<Question> &questions) {
+    std::random_device rd;
+    std::mt19937 rng(rd()); 
+    char respuesta_char;   
+    int puntaje_actual = 0;
+
+    int num_preguntas_a_jugar = std::min((int)questions.size(), 7);
 
     std::shuffle(questions.begin(), questions.end(), rng);
 
@@ -46,27 +39,25 @@ void playCategory(std::vector<Question> &questions) {
             std::cout << opcion << std::endl;
         }
 
-        std::cout << "Tu respuesta (A, B, C, D): ";
+        std::cout << "Tu respuesta: ";
         // Bucle para un manejo robusto de la entrada del usuario
         while (!(std::cin >> respuesta_char) || (std::toupper(respuesta_char) < 'A' || std::toupper(respuesta_char) > 'D')) {
-            std::cout << "Entrada inválida. Por favor, ingresa A, B, C o D: ";
-            std::cin.clear(); // Limpiar el indicador de error
+            std::cout << "Entrada invalida. Por favor, ingresa A, B, C o D: ";
+            std::cin.clear(); 
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Descartar entrada inválida
         }
 
-        // Limpiar el carácter de nueva línea restante después de leer 'respuesta_char'
-        // para prevenir problemas con entradas subsiguientes.
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         respuesta_char = std::toupper(respuesta_char); // Convertir la respuesta a mayúsculas para una comparación consistente
 
         // Comparar la respuesta del usuario con la respuesta correcta (también convertida a mayúsculas)
-        if (respuesta_char == std::toupper(questions[i].correct_answer)) {
-            std::cout << "¡Respuesta correcta! +10 puntos\n";
+        if (respuesta_char == std::toupper(questions[i].answer)) {
+            std::cout << "Respuesta correcta! +10 puntos\n";
             puntaje_actual += 10;
         } else {
             std::cout << "Respuesta incorrecta. -5 puntos\n";
-            std::cout << "La respuesta correcta era: " << questions[i].correct_answer << std::endl;
+            std::cout << "La respuesta correcta era: " << questions[i].answer << std::endl;
             puntaje_actual -= 5;
         }
     }
@@ -76,7 +67,7 @@ void playCategory(std::vector<Question> &questions) {
     for (User &u : users) {
         if (u.name == currentName) {
             u.score += puntaje_actual; // Añadir los puntos de esta ronda al puntaje total del usuario
-            std::cout << "\nTu puntaje en esta categoría: " << puntaje_actual << std::endl;
+            std::cout << "\nTu puntaje en esta categoria: " << puntaje_actual << std::endl;
             std::cout << "Puntaje total de " << u.name << ": " << u.score << std::endl;
             usuario_encontrado = true;
             break;
@@ -90,15 +81,12 @@ void playCategory(std::vector<Question> &questions) {
 
     saveUsers(); // Guardar los puntajes de usuario actualizados
 
-    // No es necesario reiniciar 'puntaje_actual' aquí, ya que es una variable local
-    // y se reinicializará en la próxima llamada a la función.
-
     pressContinue();
     std::cout << "Regresando al menú principal..." << std::endl;
 }
 
-// Funciones envoltorio para cada categoría de preguntas
-void playHistory() { playCategory(historyQuestions); }    // Jugar preguntas de historia
-void playMusic() { playCategory(musicQuestions); }      // Jugar preguntas de música
-void playSports() { playCategory(sportsQuestions); }    // Jugar preguntas de deportes
-void playGeography() { playCategory(geographyQuestions); } // Jugar preguntas de geografía
+
+void playHistory() { playCategory(historyQuestions); }    
+void playMusic() { playCategory(musicQuestions); }
+void playSports() { playCategory(sportsQuestions); }
+void playGeography() { playCategory(geographyQuestions); }
