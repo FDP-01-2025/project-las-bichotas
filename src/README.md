@@ -304,3 +304,5 @@ FLUJOGRAMA
 
 ![Diagrama de flujo](flujograma.jpg)
 
+https://tinyurl.com/yk9hf247
+
