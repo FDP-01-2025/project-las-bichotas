@@ -9,10 +9,10 @@ using namespace std;
 void displayUsers();
 
 // Función para guardar un nuevo usuario, evitando duplicados (no distingue mayúsculas/minúsculas y elimina espacios)
-void saveUser(const string& name);
+void saveUser(const string &name);
 
 // Función para actualizar la puntuación de un jugador en el ranking (agrega una victoria a ranking.txt)
-void updateRanking(const string& name);
+void updateRanking(const string &name);
 
 // Función para mostrar los 5 mejores jugadores del ranking
 void displayRanking();
