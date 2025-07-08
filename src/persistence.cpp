@@ -13,16 +13,20 @@ using namespace std;
 string toLowerAndTrim(const string &str)
 {
     string s = str;
-    // Eliminar espacios en blanco al inicio
+
+    // Eliminar espacios al inicio
     s.erase(s.begin(), find_if(s.begin(), s.end(), [](unsigned char ch)
                                { return !isspace(ch); }));
-    // Eliminar espacios en blanco al final
+
+    // Eliminar espacios al final
     s.erase(find_if(s.rbegin(), s.rend(), [](unsigned char ch)
                     { return !isspace(ch); })
                 .base(),
             s.end());
+
     // Convertir a minúsculas
     transform(s.begin(), s.end(), s.begin(), ::tolower);
+
     return s;
 }
 
@@ -35,12 +39,14 @@ void displayUsers()
         cout << "No se encontraron usuarios registrados." << endl;
         return;
     }
+
     string user;
     cout << "--- Usuarios Registrados ---" << endl;
     while (getline(file, user))
     {
         cout << "- " << user << endl;
     }
+
     file.close();
 }
 
@@ -61,23 +67,18 @@ void saveUser(const string &name)
         inputFile.close();
     }
 
-    // Procesar el nombre del nuevo usuario para comparación
     string processedName = toLowerAndTrim(name);
 
     // Verificar si el nombre procesado ya existe
-    bool userExists = false;
-    if (find(processedExistingUsers.begin(), processedExistingUsers.end(), processedName) != processedExistingUsers.end())
-    {
-        userExists = true;
-    }
+    bool userExists = find(processedExistingUsers.begin(), processedExistingUsers.end(), processedName) != processedExistingUsers.end();
 
     // Si el usuario no existe, agregar el nombre original al archivo
     if (!userExists)
     {
-        ofstream outputFile("users.txt", ios::app); // Abrir en modo adjuntar
+        ofstream outputFile("users.txt", ios::app);
         if (outputFile.is_open())
         {
-            outputFile << name << endl; // Guardar el nombre original
+            outputFile << name << endl;
             outputFile.close();
             cout << "Usuario '" << name << "' registrado." << endl;
         }
@@ -93,10 +94,9 @@ void saveUser(const string &name)
 }
 
 // Actualiza la puntuación de un jugador en el archivo de ranking ("ranking.txt")
-// Esta función simplemente agrega el nombre del ganador al archivo.
 void updateRanking(const string &name)
 {
-    ofstream file("ranking.txt", ios::app); // Abrir en modo adjuntar
+    ofstream file("ranking.txt", ios::app);
     if (file.is_open())
     {
         file << name << endl;
@@ -118,26 +118,23 @@ void displayRanking()
         return;
     }
 
-    map<string, int> playerWins; // Mapa para contar victorias de cada jugador
+    map<string, int> playerWins;
     string name;
     while (getline(file, name))
     {
-        playerWins[name]++; // Incrementar el conteo de victorias por jugador
+        playerWins[name]++;
     }
+
     file.close();
 
-    // Convertir el mapa a un vector de pares para ordenar
     vector<pair<string, int>> rankingList;
     for (const auto &entry : playerWins)
     {
         rankingList.push_back(entry);
     }
 
-    // Ordenar la lista de ranking por victorias en orden descendente
     sort(rankingList.begin(), rankingList.end(), [](const auto &a, const auto &b)
-         {
-             return b.second < a.second; // Ordenar por victorias (segundo elemento) descendente
-         });
+         { return b.second > a.second; });
 
     cout << "--- TOP 5 JUGADORES ---" << endl;
     for (size_t i = 0; i < rankingList.size() && i < 5; ++i)
@@ -149,7 +146,7 @@ void displayRanking()
 // Reinicia (limpia) todas las entradas del archivo de ranking
 void resetRanking()
 {
-    ofstream file("ranking.txt", ios::trunc); // Abrir en modo truncar para limpiar contenido
+    ofstream file("ranking.txt", ios::trunc);
     if (file.is_open())
     {
         file.close();

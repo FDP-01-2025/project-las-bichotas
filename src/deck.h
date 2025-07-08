@@ -3,22 +3,20 @@
 
 #include <vector>
 #include <string>
-#include <algorithm>
-#include <random>
+#include <algorithm> // Para std::shuffle
+#include <random>    // Para std::mt19937 y std::random_device
 
 using namespace std;
 
 // Estructura Card para almacenar palo, valor y puntos
-struct Card
-{
+struct Card {
     string suit;
     string rank;
     int points;
 };
 
 // Clase Deck para manejar una baraja de cartas
-class Deck
-{
+class Deck {
 private:
     vector<Card> cards; // Almacena todas las cartas en la baraja
 

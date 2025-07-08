@@ -51,7 +51,7 @@ Card Deck::deal()
     if (cards.empty())
     {
         // Maneja el caso donde la baraja está vacía (por ejemplo, barajar de nuevo o terminar el juego)
-        throw runtime_error("La baraja esta vacia. No se pueden repartir mas cartas.");
+        throw runtime_error("La baraja está vacía. No se pueden repartir más cartas.");
     }
     Card c = cards.back(); // Obtiene la carta superior
     cards.pop_back();      // La elimina de la baraja
