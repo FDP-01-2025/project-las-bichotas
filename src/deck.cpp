@@ -3,11 +3,11 @@
 #include <random>    // Para mt19937 y random_device
 #include <ctime>     // Para time (semilla para random)
 #include <stdexcept> // Para runtime_error
-#include <string>    // Para stoi (si el rango es numérico)
+#include <string>    
 
 using namespace std;
 
-// Constructor: Inicializa una baraja estándar de 52 cartas
+// Inicializa una baraja estándar de 52 cartas
 Deck::Deck() {
     vector<string> suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
     vector<string> ranks = {"A", "2", "3", "4", "5", "6", "7",
@@ -31,8 +31,8 @@ Deck::Deck() {
 
 // Mezcla las cartas de la baraja usando un generador de números aleatorios
 void Deck::shuffle() {
-    static std::random_device rd;
-    static std::mt19937 g(rd());
+    std::random_device rd;
+    std::mt19937 g(rd());
     std::shuffle(cards.begin(), cards.end(), g);
 }
 
