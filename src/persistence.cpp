@@ -157,6 +157,6 @@ void resetRanking()
     }
     else
     {
-        cerr << "Error: No se pudo abrir el archivo de ranking para reiniciar." << endl;
+        cerr <<"Error: No se pudo abrir el archivo de ranking para reiniciar."<< endl;
     }
 }
