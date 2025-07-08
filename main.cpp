@@ -108,7 +108,7 @@ void playAgainstDealer(mt19937& rng) { // Se agregó mt19937& rng
     saveUser(name); // Guarda el usuario (maneja duplicados)
 
     Deck deck;
-    deck.shuffle(); // Baraja el mazo
+    deck.shuffle(rng); // Baraja el mazo
 
     Player player(name);
     Player dealer("Dealer");
@@ -187,7 +187,7 @@ void playMultiplayer(mt19937& rng) { // Modificado para aceptar RNG
     }
 
     Deck deck;
-    deck.shuffle(); // Baraja el mazo
+    deck.shuffle(rng); // Baraja el mazo
 
     // Reparto inicial: 2 cartas para cada jugador
     for (int i = 0; i < 2; ++i) {

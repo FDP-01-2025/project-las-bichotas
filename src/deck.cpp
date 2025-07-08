@@ -29,9 +29,7 @@ Deck::Deck() {
 }
 
 // Mezcla las cartas de la baraja usando un generador externo
-void Deck::shuffle() {
-    std::random_device rd;
-    std::mt19937 rng(rd());
+void Deck::shuffle(std::mt19937& rng) {
     std::shuffle(cards.begin(), cards.end(), rng);
 }
 
